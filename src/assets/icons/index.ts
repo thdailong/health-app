@@ -5,6 +5,7 @@ import Menu from "./menu";
 import Challenge from "./challenge";
 import Knife from "./knife";
 import Cup from "./cup";
+import ChevronUp from "./chevronUp";
 
 const Icons = {
   Close,
@@ -14,6 +15,7 @@ const Icons = {
   Challenge,
   Knife,
   Cup,
+  ChevronUp,
 };
 
 export default Icons;

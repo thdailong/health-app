@@ -8,7 +8,7 @@ interface GridLayoutProps {
 const GridLayout = ({ children, className = "" }: GridLayoutProps) => {
   return (
     <div
-      className={`grid grid-cols-2 sm:grid-cols-4 gap-4 ${className}`}
+      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-2 ${className}`}
     >
       {children}
     </div>
@@ -16,4 +16,3 @@ const GridLayout = ({ children, className = "" }: GridLayoutProps) => {
 };
 
 export default GridLayout;
-

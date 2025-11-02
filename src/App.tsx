@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import MainPage from "./pages/MainPage";
-import MyRecordPage from "./pages/MyRecordPage";
+import MyRecordPage from "./pages/my-record";
 import MyColumnPage from "./pages/MyColumnPage";
 import "./App.css";
 

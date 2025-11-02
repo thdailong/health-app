@@ -2,7 +2,7 @@ import { ReactNode, ButtonHTMLAttributes } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline" | "gradient";
   className?: string;
 }
 
@@ -13,15 +13,16 @@ const Button = ({
   ...props
 }: ButtonProps) => {
   const baseStyles =
-    "px-6 py-3 rounded font-medium transition-all duration-300 cursor-pointer border";
+    "px-6 py-3 rounded-md transition-all duration-300 cursor-pointer border";
 
   const variantStyles = {
-    primary:
-      "bg-gradient-primary text-white border-transparent hover:opacity-90",
+    primary: "bg-primary-400 text-white border-transparent hover:opacity-90",
     secondary:
       "bg-secondary-300 text-dark-600 border-transparent hover:opacity-90",
     outline:
       "bg-transparent text-primary-400 border-primary-400 hover:bg-primary-400 hover:text-white",
+    gradient:
+      "bg-gradient-button text-white border-transparent hover:opacity-90",
   };
 
   return (
@@ -35,4 +36,3 @@ const Button = ({
 };
 
 export default Button;
-
