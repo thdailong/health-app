@@ -1,23 +1,4 @@
-import React from "react";
-
-const EXERCISE_DATA = [
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-  { name: "家事全般（立位・軽い）", kcal: "26kcal", time: "10 min" },
-];
+import { EXERCISE_DATA } from "@/data/myRecordPageData";
 
 const MyExercise = () => {
   return (

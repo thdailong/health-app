@@ -1,70 +1,10 @@
 import Container from "@/components/Container";
 import GridLayout from "@/components/GridLayout";
-import Button from "@/components/Button";
 import BodyRecordChart from "@/components/BodyRecordChart";
 import d01 from "@/assets/photo/d01.jpg";
-import Icons from "@/assets/icons";
 import HexPolygon from "@/assets/hex-polygon.svg";
-import m01 from "@/assets/photo/m01.jpg";
-import l03 from "@/assets/photo/l03.jpg";
-import l01 from "@/assets/photo/l01.jpg";
-import l02 from "@/assets/photo/l02.jpg";
-import d02 from "@/assets/photo/d02.jpg";
-import s01 from "@/assets/photo/s01.jpg";
-
-const TEXT = [
-  {
-    label: "Morning",
-    Icon: Icons.Knife,
-  },
-  {
-    label: "Lunch",
-    Icon: Icons.Knife,
-  },
-  {
-    label: "Dinner",
-    Icon: Icons.Knife,
-  },
-  {
-    label: "Snack",
-    Icon: Icons.Cup,
-  },
-];
-
-const FOODS = [
-  {
-    img: m01,
-    label: "05.21 Morning",
-  },
-  {
-    img: l03,
-    label: "05.21 Lunch",
-  },
-  {
-    img: d01,
-    label: "05.21 Dinner",
-  },
-  {
-    img: l01,
-    label: "05.21 Snack",
-  },
-  {
-    img: m01,
-    label: "05.20 Morning",
-  },
-  {
-    img: l02,
-    label: "05.20 Lunch",
-  },
-  {
-    img: d02,
-    label: "05.20 Dinner",
-  },
-  {
-    img: s01,
-    label: "05.20 Snack",
-  },
-];
+import { MEAL_CATEGORIES, FOOD_RECORDS } from "@/data/mainPageData";
+import LoadingMoreSection from "@/components/LoadingMoreSection";
 
 const MainPage = () => {
   return (
@@ -85,9 +25,9 @@ const MainPage = () => {
         </div>
       </div>
       <div className="px-4">
-        <Container>
+        <Container className="pb-16">
           <div className="flex justify-evenly py-6 flex-wrap gap-y-4">
-            {TEXT.map((item, index) => (
+            {MEAL_CATEGORIES.map((item, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center relative h-[134px] w-[134px] justify-center"
@@ -107,7 +47,7 @@ const MainPage = () => {
             ))}
           </div>
           <GridLayout className="mb-8">
-            {FOODS.map((item, i) => (
+            {FOOD_RECORDS.map((item, i) => (
               <div
                 key={i}
                 className="aspect-square bg-gray-200 flex justify-start items-end text-dark-600 bg-cover bg-center"
@@ -119,14 +59,7 @@ const MainPage = () => {
               </div>
             ))}
           </GridLayout>
-          <div className="flex items-center mb-16">
-            <Button
-              variant="gradient"
-              className="w-full max-w-[296px] h-14 mx-auto px-2 font-light"
-            >
-              記録をもっと見る
-            </Button>
-          </div>
+          <LoadingMoreSection text="記録をもっと見る" />
         </Container>
       </div>
     </div>

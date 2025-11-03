@@ -1,83 +1,7 @@
 import Container from "@/components/Container";
-import Column1 from "@/assets/photo/column-1.jpg";
-import Column2 from "@/assets/photo/column-2.jpg";
-import Column3 from "@/assets/photo/column-3.jpg";
-import Column4 from "@/assets/photo/column-4.jpg";
-import Column5 from "@/assets/photo/column-5.jpg";
-import Column6 from "@/assets/photo/column-6.jpg";
-import Column7 from "@/assets/photo/column-7.jpg";
-import Column8 from "@/assets/photo/column-8.jpg";
 import GridLayout from "@/components/GridLayout";
-
-const RECOMMENDED_CATEGORIES = [
-  { title: "RECOMMENDED COLUMN", subtitle: "オススメ", bgColor: "bg-dark-600" },
-  { title: "RECOMMENDED DIET", subtitle: "ダイエット", bgColor: "bg-dark-600" },
-  {
-    title: "RECOMMENDED BEAUTY",
-    subtitle: "美容",
-    bgColor: "bg-dark-600",
-  },
-  { title: "RECOMMENDED HEALTH", subtitle: "健康", bgColor: "bg-dark-600" },
-];
-
-const COLUMN_ARTICLES = [
-  {
-    image: Column1,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column2,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column3,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column4,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column5,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column6,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column7,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-  {
-    image: Column8,
-    date: "2021.05.17",
-    time: "23:25",
-    text: "魚を食べて頭もカラダも元気に！知っておきたい魚を食べるメリ…",
-    tags: ["#魚料理", "#和食", "#DHA"],
-  },
-];
+import LoadingMoreSection from "@/components/LoadingMoreSection";
+import { RECOMMENDED_CATEGORIES, COLUMN_ARTICLES } from "@/data/columnPageData";
 
 const MyColumnPage = () => {
   return (
@@ -137,11 +61,7 @@ const MyColumnPage = () => {
         </GridLayout>
 
         {/* Load More Button */}
-        <div className="flex justify-center mt-6">
-          <button className="bg-gradient-button text-white px-16 py-4 rounded-md hover:opacity-90 transition-opacity">
-            コラムをもっと見る
-          </button>
-        </div>
+        <LoadingMoreSection text="コラムをもっと見る" className="mt-6" />
       </Container>
     </div>
   );

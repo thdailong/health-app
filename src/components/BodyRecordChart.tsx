@@ -7,12 +7,7 @@ import {
   ResponsiveContainer,
   Dot,
 } from "recharts";
-
-interface DataPoint {
-  month: string;
-  value1: number;
-  value2: number;
-}
+import { BODY_RECORD_DATA, BodyRecordDataPoint } from "@/data/bodyRecordData";
 
 interface CustomTickProps {
   x?: number;
@@ -52,20 +47,7 @@ interface Props {
 
 const BodyRecordChart = (props: Props) => {
   const { className = "" } = props;
-  const data: DataPoint[] = [
-    { month: "6", value1: 62, value2: 62 },
-    { month: "7", value1: 60, value2: 58 },
-    { month: "8", value1: 54, value2: 56 },
-    { month: "9", value1: 56, value2: 52 },
-    { month: "10", value1: 54, value2: 50 },
-    { month: "11", value1: 52, value2: 48 },
-    { month: "12", value1: 50, value2: 46 },
-    { month: "1", value1: 48, value2: 44 },
-    { month: "2", value1: 46, value2: 42 },
-    { month: "3", value1: 44, value2: 40 },
-    { month: "4", value1: 42, value2: 38 },
-    { month: "5", value1: 40, value2: 36 },
-  ];
+  const data: BodyRecordDataPoint[] = BODY_RECORD_DATA;
 
   return (
     <div className={`w-full bg-dark-600 h-[294px] ${className}`}>

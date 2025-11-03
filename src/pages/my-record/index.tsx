@@ -1,31 +1,8 @@
 import Container from "@/components/Container";
-import MyRecommend1 from "@/assets/photo/my-recommend-1.jpg";
-import MyRecommend2 from "@/assets/photo/my-recommend-2.jpg";
-import MyRecommend3 from "@/assets/photo/my-recommend-3.jpg";
 import BodyRecord from "./BodyRecord";
 import MyExercise from "./MyExercise";
 import MyDiary from "./MyDiary";
-
-const NAVIGATION_BLOCKS = [
-  {
-    title: "BODY RECORD",
-    label: "自分のカラダの記録",
-    image: MyRecommend1,
-    id: "body-record",
-  },
-  {
-    title: "MY EXERCISE",
-    label: "自分の運動の記録",
-    image: MyRecommend2,
-    id: "my-exercise",
-  },
-  {
-    title: "MY DIARY",
-    label: "自分の日記",
-    image: MyRecommend3,
-    id: "my-diary",
-  },
-];
+import { NAVIGATION_BLOCKS } from "@/data/myRecordPageData";
 
 const MyRecordPage = () => {
   const handleNavigation = (id: string) => {
