@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Inter", "Hiragino Kaku Gothic Pro", "sans-serif"],
+        ja: ["Hiragino Kaku Gothic Pro", "sans-serif"],
       },
       colors: {
         primary: {

@@ -19,7 +19,7 @@ const MainPage = () => {
           />
         </div>
         <div className="flex-1 bg-dark-600 w-full py-2.5 h-[312px] overflow-hidden">
-          <div className="max-w-[600px] ml-12">
+          <div className="max-w-[600px] ml-4 md:ml-12 pr-2">
             <BodyRecordChart />
           </div>
         </div>

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font Face for Hiragino Kaku Gothic Pro */
+@font-face {
+  font-family: "Hiragino Kaku Gothic Pro";
+  src: url("./fonts/Hiragino Kaku Gothic Pro W3.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Custom scrollbar for exercise section */
 .exercise-scroll::-webkit-scrollbar {
   width: 6px;
